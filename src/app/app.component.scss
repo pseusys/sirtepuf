@@ -1,0 +1,59 @@
+.app-header {
+    width: 100vw;
+    height: 15vh;
+    box-sizing: border-box;
+    display: inline-flex;
+    padding-block: 2vh;
+    padding-inline-start: 15%;
+    padding-inline-end: 1vw;
+}
+
+.app-corner {
+    width: 20%;
+    height: 100%;
+    display: inherit;
+    align-items: center;
+    justify-content: end;
+
+    a, a:hover, a:visited, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.app-title {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 11vh;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    font-size: 11vh;
+    user-select: none;
+    // background: linear-gradient(#0057B7 50%, #FFDD00 50%);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 0.5rem dimgray );
+}
+
+.app-middle {
+    width: 100vw;
+    height: 70vh;
+    box-sizing: border-box;
+    padding: 1vh;
+}
+
+.input-window {
+    width: 100%;
+    height: 100%;
+}
+
+.app-footer {
+    width: 100vw;
+    height: 15vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
