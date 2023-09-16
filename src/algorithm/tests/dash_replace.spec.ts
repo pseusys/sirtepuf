@@ -1,4 +1,4 @@
-import { DashReplaceRule } from "../rules/dash_replace";
+import { DashReplaceRule } from '../rules/dash_replace';
 
 describe('DashReplace rule', () => {
   let dashReplace: DashReplaceRule;

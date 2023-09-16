@@ -1,4 +1,4 @@
-import { ParagraphRule } from "../rules/new_paragraph";
+import { ParagraphRule } from '../rules/new_paragraph';
 
 describe('ParagraphRule rule', () => {
   let paragraphReplace: ParagraphRule;
@@ -15,9 +15,9 @@ describe('ParagraphRule rule', () => {
   });
 
   it('should set any paragraph start', () => {
-    const testLine = '\n\u2010Этот символ должен заменяться на вот этот \u2014 символ';
+    const testLine = 'текст.\n\u2010Этот символ должен заменяться на вот этот \u2014 символ';
     const replaced = paragraphReplace.apply(testLine);
-    const expected = '\n\t\u2014 Этот символ должен заменяться на вот этот \u2014 символ';
+    const expected = 'текст.\n\t\u2014 Этот символ должен заменяться на вот этот \u2014 символ';
     expect(replaced).toEqual(expected);
   });
 
