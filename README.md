@@ -1,6 +1,6 @@
 # Sirtepuf
 
-> *Si**mple **r**ussian **te**xt for **pu**blishing **f**ormatter
+> **Si**mple **r**ussian **te**xt for **pu**blishing **f**ormatter
 
 ## Development server
 
