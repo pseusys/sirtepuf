@@ -29,7 +29,7 @@
     display: inherit;
     align-items: center;
     justify-content: center;
-    font-size: 11vh;
+    font-size: min(11vh, 10vw);
     user-select: none;
     background: linear-gradient(#0057B7 50%, #FFDD00 50%);
     background-clip: text;
