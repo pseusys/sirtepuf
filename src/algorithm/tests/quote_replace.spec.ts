@@ -17,7 +17,7 @@ describe('QuoteReplace rule', () => {
   it('should replace inner quotes with beautiful quotes', () => {
     const testLine = 'Этот текст "был взят \'а этот ещё в одни\' кавычки"';
     const replaced = quoteReplace.apply(testLine);
-    const expected = 'Этот текст \u00ABбыл взят \u201Cа этот ещё в одни\u201D кавычки\u00BB';
+    const expected = 'Этот текст \u00ABбыл взят \u201Eа этот ещё в одни\u201C кавычки\u00BB';
     expect(replaced).toEqual(expected);
   });
 });

@@ -3,11 +3,11 @@ import { Rule } from '../primitives';
 export class QuoteReplaceRule extends Rule {
     private outerOpenQuote = '\u00AB';
     private outerCloseQuote = '\u00BB';
-    private innerOpenQuote = '\u201C';
-    private innerCloseQuote = '\u201D';
+    private innerOpenQuote = '\u201E';
+    private innerCloseQuote = '\u201C';
 
-    private openQuoteRegexp = /(^|\n|\s)[\u201C|\u00AB|\u201E|\u0022|\u0027]/gmu;
-    private closeQuoteRegexp = /\S[\u201D|\u00BB|\u201F|\u0022|\u0027]($|\n|\s|\p{P})/gmu;
+    private openQuoteRegexp = /(^|\n|\s)[\u201E|\u00AB|\u201E|\u0022|\u0027]/gmu;
+    private closeQuoteRegexp = /\S[\u201C|\u00BB|\u201F|\u0022|\u0027]($|\n|\s|\p{P})/gmu;
     private innerQuoteRegexp = /(\u00AB[\S|\s]+)(\u00AB[\s|\S]+\u00BB)([\S|\s]+\u00BB)/gmu;
 
     public override apply(value: string): string {
