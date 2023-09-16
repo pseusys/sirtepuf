@@ -15,9 +15,9 @@ import { Clipboard } from '@angular/cdk/clipboard';
 export class AppComponent {
   title = 'SiRTePuF';
 
-  @ViewChild('text', {read: ElementRef}) textToConvert!: ElementRef<HTMLElement>;
+  @ViewChild('text', {read: ElementRef}) textToConvert!: ElementRef<HTMLInputElement>;
 
-  converter = new Transformer();
+  private converter = new Transformer();
 
   constructor(matIconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private toastr: ToastrService, private clipboard: Clipboard) {
     matIconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@develop/icons/github.svg'));
@@ -32,10 +32,11 @@ export class AppComponent {
   }
 
   onSubmit() {
-    this.textToConvert;
+    this.textToConvert.nativeElement.value = this.converter.transform(this.textToConvert.nativeElement.value);
   }
 
   onTextCopy() {
-
+    if (this.clipboard.copy(this.textToConvert.nativeElement.value)) this.toastr.success("Copied!");
+    else this.toastr.error("Copying error :(")
   }
 }
