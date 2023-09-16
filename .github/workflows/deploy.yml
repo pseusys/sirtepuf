@@ -41,6 +41,9 @@ jobs:
       - name: Get Dependencies 📥
         run: npm install
 
+      - name: Install Angular 📐
+        run: npm install -g @angular/cli@latest
+      
       - name: Build Web Application 🏗️
         run: ng build --configuration production --base-href /sirtepuf/
 
